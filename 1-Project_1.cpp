@@ -1,5 +1,8 @@
 // 2. Project 1.cpp : Defines the entry point for the console application.
-//
+// My first official c++ program after learning the basics
+// Done in VS Express, because it looks nice and is free
+// A simple program that averages three numbers
+// I can't cast for my life, so all three input variables are floats
 
 #include "stdafx.h"
 #include <iostream>
