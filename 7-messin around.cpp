@@ -1,5 +1,6 @@
 // messin around.cpp : Defines the entry point for the console application.
-//
+// Nothing really new here
+// Just went along with the next problem
 
 #include "stdafx.h"
 #include <iostream>
