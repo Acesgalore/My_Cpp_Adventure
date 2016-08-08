@@ -1,5 +1,7 @@
 // ConsoleApplication4.cpp : Defines the entry point for the console application.
-//
+// Learned how to input and output from/to files
+// I followed along on a youtube video and this was the code. The text file has 5 numbers in it.
+// Text file unincluded because it's pretty straightforward
 
 #include "stdafx.h"
 #include <iostream>
