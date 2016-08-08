@@ -1,5 +1,10 @@
 // ConsoleApplication1.cpp : Defines the entry point for the console application.
-//
+// For loops (nested nonetheless)! Multidimensional arrays (I didn't write an official program when I learned arryas)
+// Functions! References! Oh my!
+// I planned on making a small game but abandoned the idea because I thought it would take too long
+// Anyway, I learned all this stuff by messing around in studio express, but never saved a single project for any of it
+// So here's a program that just prints the initial board and instructions that I wanted
+// But never got around to doing
 
 #include "stdafx.h"
 #include <iostream>
