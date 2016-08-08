@@ -1,5 +1,7 @@
 // Menu chooser.cpp : Defines the entry point for the console application.
-//
+// Second c++ program
+// I learned how to initialize enums, so I created this simple program...although the enum is pointless and unused
+// It's more about learning the switch statement
 
 #include "stdafx.h"
 #include <iostream>
@@ -13,7 +15,7 @@ int main()
 	cout << "3. hard\n\n";
 	enum difficulty {easy = 1, normal, hard};
 	difficulty choice;
-	cout << "Select your desired difficulty: ";
+	cout << "Select your desired difficulty (1/2/3): ";
 	cin >> choice;
 	switch (choice)
 	{
