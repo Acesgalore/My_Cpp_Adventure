@@ -1,5 +1,6 @@
 // Grading Program.cpp : Defines the entry point for the console application.
-//
+// Learned about logical operators and if-else statements
+// This program inputs a number grade and outputs a message depending on your grade
 
 #include "stdafx.h"
 #include <iostream>
