@@ -4,12 +4,19 @@
 // Chips
 // Fruit
 // Jerky 
+/*******************************/
+// I made this program just today! This is the reason I started this repo.
+// I wanted to keep track of my programs and I thought that this was the first real program I have ever made
+// It's a game where the gameplay is eating 1 of 3 foods
+// It increases the counter and then you can eat again
+// IT HAS A SAVE FILE SO YOU CAN CONTINUE THE GAME. I AM SO HAPPY.
 
 #include "stdafx.h"
 #include <iostream>
 #include <fstream>
 #include <Windows.h>
 
+// finally remembered to declare the functions first. Much easier to read, yes?
 void input();
 void endGame();
 void printScreen();
@@ -18,11 +25,12 @@ void setup();
 
 using namespace std;
 
-int snackAmount[3] = { 0, 0, 0 };
-bool gameOver = false;
+int snackAmount[3] = { 0, 0, 0 }; // tally score of things eaten
+bool gameOver = false; // for the game loop
 
 int main()
 {
+	// super basic game loop, but it looks so good, am I right?
 	cout << "Welcome to The Snacking Game!\n"
 		<< "You have the choice of snacking on chips, fruit, or jerky.\n"
 		<< "You can also choose to load your progress or start a new game.\n";
@@ -46,12 +54,12 @@ void setup()
 	cout << "1 = New Game\n2 = Load Game\nYour choice (1/2): ";
 	cin >> choice;
 	cout << endl;
-	if (choice == 1)
+	if (choice == 1) // if newGame, everything = 0;
 	{
 		snackAmount[0] = 0; snackAmount[1] = 0; snackAmount[2] = 0;
 		return;
 	}
-	else if (choice == 2)
+	else if (choice == 2) // if continueGame, everything = saveFile;
 	{
 		ifstream inFile("SaveFile.txt");
 		inFile >> snackAmount[0] >> snackAmount[1] >> snackAmount[2];
@@ -61,14 +69,15 @@ void setup()
 	else
 	{
 		cout << "Not a valid option. Please enter a valid option.\n";
-		setup();
+		setup(); // just to ensure nothing happens to the file
 	}
 	return;
 }
 
 void printScreen()
 {
-	system("cls");
+	system("cls"); // nifty clarity thing I learned while making this game
+			// because it was hard to follow the gameflow if text kept jumping around
 	cout << "***************************************"
 		<< "\nYour total amount of snacks snacked is " << snackAmount[0] + snackAmount[1] + snackAmount[2] << ".\n"
 		<< "You have eaten " << snackAmount[0] << " chips.\n"
@@ -79,7 +88,7 @@ void printScreen()
 	return;
 }
 
-void input()
+void input() // where the magic happens
 {
 	int choice;
 
@@ -124,7 +133,7 @@ void endGame()
 		<< "\nWould you like to save your game? (y/n): ";
 	cin >> choice;
 	
-	if (choice == 'y')
+	if (choice == 'y') // SAVE GAME WHOOOOO
 		saveData();
 	
 	cout << "\nThank you for playing The Snacking game!\n\n";
