@@ -7,6 +7,12 @@ drink
 sleep
 work
 */
+// MY FIRST EVER FULL-LENGTH GAME!! I was so so so so so happy that I made this
+// I tried making it customizable by using a constant variable as the max stats
+// anyway this game is just a resource management game, it's impossible to lose but if you do then
+// it tells you how you died. Pretty cool.
+// I didn't declare the functions first then add them to the bottom, so you kinda
+// have to scroll through the functions to get to main.. my bad
 
 #include "stdafx.h"
 #include <iostream>
@@ -18,7 +24,7 @@ int food = MAXSTAT / 2; int water = MAXSTAT / 2; int sleep = MAXSTAT / 2;
 bool gameOver = false;
 int choice;
 
-void status(int a, int b, int c)
+void status(int a, int b, int c) // Prints the current stats of the player
 {
 	cout << "Player status:\n"
 		<< "--------------\n"
@@ -27,7 +33,7 @@ void status(int a, int b, int c)
 		<< "Sleep: " << c << "/" << MAXSTAT << endl;
 }
 
-int input()
+int input() // Basic input function
 {
 	int x;
 	cout << "--------------\n"
@@ -38,18 +44,18 @@ int input()
 	return x;
 }
 
-void logic(int a)
+void logic(int a) // The logic of the game
 {
-	switch (a)
+	switch (a) // The input is passed to the function then the switch
 	{
 	case 1:
 	{
-		if (food + 10 > MAXSTAT)
+		if (food + 10 > MAXSTAT) // stat max check
 		{
 			cout << "\n************************\nYou are too full to eat!\n************************\n";
 			return;
 		}
-		food += 10; water -= 5; sleep -= 5;
+		food += 10; water -= 5; sleep -= 5; // progression of stats
 		break;
 	}
 	case 2:
@@ -72,7 +78,7 @@ void logic(int a)
 		food -= 5; water -= 5; sleep += 10;
 		break;
 	}
-	case 4:
+	case 4: // "I give up"
 	{
 		gameOver = true;
 		return;
@@ -80,7 +86,7 @@ void logic(int a)
 	default: break;
 	}
 
-	if (food <= 0)
+	if (food <= 0) // Death animations
 	{
 		status(food, water, sleep);
 		cout << "\n\n\nYou decided not to eat even though it was obvious you were dying of\nstarvation.\n\n\n";
@@ -110,7 +116,7 @@ int main()
 		<< "You can spend the day doing one of those three things.\n"
 		<< "If any of them drop to 0, then you can have one last meal, drink, or sleep, and then you die.\nGood luck!" << endl;
 
-	while (gameOver == false)
+	while (gameOver == false) // I learned about basic game loops from a youtube vid
 	{
 		status(food, water, sleep);
 		choice = input();
