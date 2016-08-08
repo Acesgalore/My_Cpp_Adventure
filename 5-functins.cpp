@@ -1,5 +1,8 @@
 // functins.cpp : Defines the entry point for the console application.
-//
+// I looked online for simple ideas to make a program with and I found one that was just basic functions
+// So here's me learning how to pass arguements to functions
+// There are three functions: one that prints hi, one that multiplies numbers, and one that halfs a number
+// until it reaches 1
 
 #include "stdafx.h"
 #include <iostream>
