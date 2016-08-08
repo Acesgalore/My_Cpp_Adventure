@@ -1,5 +1,9 @@
 // problems.cpp : Defines the entry point for the console application.
-//
+// This one was a LOT of fun when I finished it
+// The premise is that you enter 5 numbers and then a 6th number that you search for in the first 5 numbers
+// and the program messages if your number matches any of the first 5
+// using a for loop and an array, the for loop checks your number against the next array member in each pass
+// I should really start commenting my programs as I go along now, since they are getting slightly complex..
 
 #include "stdafx.h"
 #include <iostream>
