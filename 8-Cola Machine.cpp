@@ -1,5 +1,7 @@
 // Cola Machine.cpp : Defines the entry point for the console application.
-//
+// switch statement again
+// just going along with the problems..
+// this program prints my favorite drinks and asks you to select one
 
 #include "stdafx.h"
 #include <iostream>
