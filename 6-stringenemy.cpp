@@ -1,5 +1,9 @@
 // stringenemy.cpp : Defines the entry point for the console application.
-//
+// Continued from the problems I found on the internet earlier,
+// I now worked with strings instead of just functions
+// I learned a new library called algorithm, which allowed me to manipulate strings how I needed
+// This program asks for input of a first then last name
+// And then manipulates it
 
 #include "stdafx.h"
 #include <iostream>
